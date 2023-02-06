@@ -1,7 +1,6 @@
 package ArrayListPackage;
 
 import java.util.*;
-import java.util.ArrayList;
 
 public class Arraylist {
     public static class ArrayListApp<E> implements List<E>{
@@ -28,6 +27,7 @@ public class Arraylist {
                 System.out.println(elements[i]);
             }
         }
+
         @Override
         public int size() {
             return 0;
@@ -96,7 +96,19 @@ public class Arraylist {
 
         @Override
         public E get(int index) {
+            checkIndex(index);
             return null;
+        }
+
+        private boolean checkIndex(int index) {
+            if( index >= 0 && index <= size){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        private E getElement(int index){
+            return (E) this.elements[index];
         }
 
         @Override
@@ -111,7 +123,21 @@ public class Arraylist {
 
         @Override
         public E remove(int index) {
-            return null;
+            if(checkIndex(index)){
+                E oldElement = (E) this.elements[index];
+                this.elements[index] = null;
+                shift(index);
+                this.size--;
+                return oldElement;
+            }else{
+                return null;
+            }
+
+        }
+        private void shift(int index){
+            for(int i = index; i<this.size-1; i++){
+                this.elements[i] = this.elements[i+1];
+            }
         }
 
         @Override

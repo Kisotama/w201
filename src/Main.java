@@ -14,10 +14,10 @@ public class Main {
         xlist.add("GG2");
         xlist.add("GG3");
         xlist.ShowList();
-        xlist.add("GG2");
-        xlist.add("GG12");
-        xlist.add("GG22");
-        xlist.add("GG32");
+        System.out.println("\n\n  Element[8] = ");
+        System.out.println(xlist.get(8));
+
+        String oldx = xlist.set(0,"Sea Tui");
         xlist.ShowList();
     }
 
