@@ -2,13 +2,10 @@ package Linked;
 
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Scanner;
 import java.util.Set;
 
 public class SinglyLinkedList<E>  {
-
-
-
-
 
     private static class iNode<E>{
         // khai báo biến
@@ -28,6 +25,8 @@ public class SinglyLinkedList<E>  {
         head = null;
         size = 0;
     }
+
+
     public void addFirst(E element){
         iNode<E> NewNode = new iNode<E>(element);
             // giả sử 1 list có 2 char là A B
@@ -62,6 +61,15 @@ public class SinglyLinkedList<E>  {
         iNode<E> currentNode;
 
         System.out.println("\n\n Show SinglyLinkedList: ");
+        currentNode = this.head;
+        while( currentNode != null){
+            System.out.println(currentNode.element);
+            currentNode = currentNode.next;
+        }
+    }  public void showObjectSingly(){
+        iNode<E> currentNode;
+
+        System.out.println("\n\n Show List: ");
         currentNode = this.head;
         while( currentNode != null){
             System.out.println(currentNode.element);

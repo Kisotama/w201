@@ -7,28 +7,46 @@ import java.util.Set;
 
 import NodePack.Node;
 import Linked.SinglyLinkedList;
+import StudentPack.Student;
+
 public class Main {
     public static void main(String[] args) {
 
-        SinglyLinkedList<String> Xlist = new SinglyLinkedList<String>();
+        SinglyLinkedList<Student> Xlist = new SinglyLinkedList<Student>();
+
+
+        Xlist.addFirst(new Student("He",'M',6));
+        Xlist.addFirst(new Student("She",'F',6.9));
+        Xlist.addFirst(new Student("What",'M',3));
+
+
+        Xlist.showObjectSingly();
 
 
 
-        Xlist.addFirst("GGbruh");
-        Xlist.addFirst("Damn");
-        Xlist.addFirst("Dude?");
-
-        Xlist.addLast("Damn");
-        Xlist.addLast("GGbruh");
-        Xlist.addLast("Dude?");
+//        SinglyLinkedList<String> Xlist = new SinglyLinkedList<String>();
+//
+//
+//
+//
+//        Xlist.addFirst("GGbruh");
+//        Xlist.addFirst("Damn");
+//        Xlist.addFirst("Dude?");
+//
+//        Xlist.addLast("Damn");
+//        Xlist.addLast("GGbruh");
+//        Xlist.addLast("Dude?");
+//
+//
+//        Xlist.showSingly();
 
 
 //        Xlist.addLast("WOW");
 //        Xlist.addLast("SUch talent");
 //        Xlist.addLast("WOW222");
 
-
-        Xlist.showSingly();
+//
+//        Xlist.showSingly();
 
 //        System.out.println("Hello world!");
 //
