@@ -1,87 +1,30 @@
-
-import ArrayListPackage.Arraylist;
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
-
-import NodePack.Node;
 import Linked.SinglyLinkedList;
-import StudentPack.Student;
+import StudentLinkedList.Student;
+import StudentLinkedList.StudentList;
 
-public class Main {
+class main {
+
     public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        System.out.println("Demo - Linear Data ADT");
 
-        SinglyLinkedList<Student> Xlist = new SinglyLinkedList<Student>();
+        StudentList xlist = new StudentList();
 
+        xlist.addFirst(new Student("A Tu", 'M', 6.9));
+        xlist.addFirst(new Student("A Ka", 'M', 3));
+        xlist.addFirst(new Student("A Ma", 'F', 5));
+        xlist.addFirst(new Student("A Pa", 'M', 6));
+        xlist.addFirst(new Student("A Ty", 'F', 9));
 
-        Xlist.addFirst(new Student("He",'M',6));
-        Xlist.addFirst(new Student("She",'F',6.9));
-        Xlist.addFirst(new Student("What",'M',3));
+        xlist.showObjectInSinglyList();
 
+        System.out.println("... in ds sv > 5");
+        xlist.showStudentListHighGPA(5);
 
-        Xlist.showObjectSingly();
-
-
-
-//        SinglyLinkedList<String> Xlist = new SinglyLinkedList<String>();
-//
-//
-//
-//
-//        Xlist.addFirst("GGbruh");
-//        Xlist.addFirst("Damn");
-//        Xlist.addFirst("Dude?");
-//
-//        Xlist.addLast("Damn");
-//        Xlist.addLast("GGbruh");
-//        Xlist.addLast("Dude?");
-//
-//
-//        Xlist.showSingly();
-
-
-//        Xlist.addLast("WOW");
-//        Xlist.addLast("SUch talent");
-//        Xlist.addLast("WOW222");
-
-//
-//        Xlist.showSingly();
-
-//        System.out.println("Hello world!");
-//
-//        Arraylist.ArrayListApp<String> xlist = new Arraylist.ArrayListApp<String>();
-//        xlist.add("GG2");
-//        xlist.add("GG2");
-//        xlist.add("GG2");
-//        xlist.add("GG32");
-//        xlist.ShowList();
-//        System.out.println("\n\n  Element[8] = ");
-//        System.out.println(xlist.get(4));
-//
-////        String oldx = xlist.set(0,"Sea Tui");
-////        xlist.ShowList();
-////
-////        xlist.remove(1);
-////        xlist.ShowList();
-//
-//        //method numberOf()
-//        xlist.add("GG 2");
-//        xlist.add("GG 2");
-//        xlist.add("GG 2");
-//        xlist.add("GG 2");
-//        xlist.ShowList();
-//        System.out.println("\n\n NumberOf = ");
-//        System.out.println(xlist.numberOf("GG 2"));
-//
-//
-//
-////        int[] arr = { 40, 50, 30, 40, 50, 30, 30 };
-//        String[] arr = { "GG", "HH", "GG" };
-////        System.out.print(xlist.getMaxFreqElement(arr, n));
-//        int n = arr.length;
 
 
     }
+
+
 
 }

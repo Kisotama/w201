@@ -1,82 +1,85 @@
 package Linked;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Scanner;
-import java.util.Set;
 
-public class SinglyLinkedList<E>  {
+public class SinglyLinkedList<E> {
 
-    private static class iNode<E>{
-        // khai báo biến
-        private  E element;
-        private iNode<E> next;
+    protected static class iNode<E> {
+        protected E element;
+        protected iNode<E> next;
 
-        public iNode(E element){
+        public iNode(E element) {
             this.element = element;
         }
+
+        public E getElement() {
+            return element;
+        }
+
+        public iNode<E> getNext() {
+            return next;
+        }
     }
-    private  iNode<E> head;
+    protected iNode<E> head;
+    protected int size;
 
-    private iNode<E> tail;
-    private int size;
-
-    public SinglyLinkedList(){
+    public SinglyLinkedList() {
         head = null;
         size = 0;
     }
 
-
-    public void addFirst(E element){
-        iNode<E> NewNode = new iNode<E>(element);
-            // giả sử 1 list có 2 char là A B
-            NewNode.next = this.head; //thg mới (C) thêm vào thg head C -> A(Head) -> B
-            this.head = NewNode; // thg đầu trở thành mới B -> A -> C
-            this.size++; // tăng size của 1 list lên thành 3 char A C B
-    }
-
-    public E getFirst(){
-        if(this.head == null)
-            return null;
-        else 
-            return this.head.element;
-        
-    }
-    public void addLast(E element){
-        iNode<E> NewNode2 = new iNode<E>(element);
-        iNode<E> lastNode;
-
-        if ( this.head == null){
-            NewNode2 = this.head;
-        } else {
-            lastNode = NewNode2;
-            while (lastNode.next != null){
-                lastNode = lastNode.next;
-                lastNode.next = NewNode2;
-            }
-        }
+    public void addFirst(E element) {
+        iNode<E> newNode = new iNode<E>(element);
+        newNode.next = this.head;
+        this.head = newNode;
         this.size++;
     }
-    public void showSingly(){
-        iNode<E> currentNode;
 
-        System.out.println("\n\n Show SinglyLinkedList: ");
-        currentNode = this.head;
-        while( currentNode != null){
-            System.out.println(currentNode.element);
-            currentNode = currentNode.next;
-        }
-    }  public void showObjectSingly(){
-        iNode<E> currentNode;
+    public E getFirst() {
+        if (this.head == null)
+            return null;
+        else
+            return this.head.element;
+    }
 
-        System.out.println("\n\n Show List: ");
-        currentNode = this.head;
-        while( currentNode != null){
-            System.out.println(currentNode.element);
-            currentNode = currentNode.next;
+    public void addLast(E element) {
+        iNode<E> newNode = new iNode<E>(element);
+        iNode<E> lastNode;
+
+        if (this.head == null) {
+            this.head = newNode;
+        } else {
+            lastNode = this.head;
+            while (lastNode.next != null)
+                lastNode = lastNode.next;
+            lastNode.next = newNode;
         }
     }
-    public void set(){
-        Set<String> set = new HashSet<String>();
+
+    public int size() {
+        return this.size;
+    }
+
+    public void showSinglyList() {
+        iNode<E> currentNode;
+
+        System.out.println("\n\n SHOW SinglyLinked List !!! ");
+        currentNode = this.head;
+        while( currentNode != null ) {
+            System.out.println(currentNode.element);
+            currentNode = currentNode.next;
+        }
+
+    }
+
+    public void showObjectInSinglyList() {
+        iNode<E> currentNode;
+
+        System.out.println("\n\n SHOW List !!! ");
+        currentNode = this.head;
+        while( currentNode != null ) {
+            System.out.println(currentNode.element.toString());
+            currentNode = currentNode.next;
+        }
+
     }
 }
