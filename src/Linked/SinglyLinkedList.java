@@ -18,6 +18,11 @@ public class SinglyLinkedList<E> {
         public iNode<E> getNext() {
             return next;
         }
+
+
+        public void setNext(iNode<E> xnext){
+            this.next = xnext;
+        }
     }
     protected iNode<E> head;
     protected int size;
@@ -82,4 +87,5 @@ public class SinglyLinkedList<E> {
         }
 
     }
+
 }

@@ -26,9 +26,18 @@ public class Student {
     public double getDTB() {
         return DTB;
     }
+    public char getGioiTinh(){
+        return GioiTinh;
+    }
+
+    public String getHoTen(){
+        return HoTen;
+    }
 
     @Override
     public String toString() {
         return  HoTen + " " + GioiTinh + " " + DTB;
     }
+
+
 }
